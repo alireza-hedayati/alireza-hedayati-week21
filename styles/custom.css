@@ -1,0 +1,37 @@
+.custom-input-div {
+  @apply w-[95%] rounded-2xl  bg-[#f4f4f4e3] p-2 text-lg font-semibold relative mb-10;
+}
+
+.input {
+  @apply bg-transparent border-0 outline-none py-1 w-full;
+}
+
+.error {
+  @apply absolute top-[60px] right-2 text-sm text-red-600 font-semibold;
+}
+
+.custom-row {
+  @apply px-4 text-lg font-semibold text-gray-600;
+}
+
+.custom-head {
+  @apply p-4 text-xl;
+}
+
+.label {
+  @apply text-black px-1 block text-sm font-bold mb-2;
+}
+
+.modal-div {
+  @apply w-full  mx-auto border-none bg-transparent p-2 mx-5 text-base font-semibold ;
+}
+
+.modal-input {
+  @apply w-full  rounded-lg bg-gray-100 p-2 text-sm font-semibold outline-none mb-1;
+
+}
+
+.add-error{
+  @apply text-red-500 text-sm  
+}
+
