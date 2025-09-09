@@ -61,19 +61,3 @@ function Dashboard({ initialData }) {
 }
 
 export default Dashboard;
-
-// if (isPending) {
-//   return (
-//     <ProtectedRoute>
-//       <span className="flex items-center justify-center mt-[20%]">
-//         <ClipLoader color="#7189BF" />
-//       </span>
-//     </ProtectedRoute>
-//   );
-// }
-
-// const filteredProducts = (data?.data || [])
-//   ?.filter((product) =>
-//     product.name.toLowerCase().includes(searchItem.toLowerCase().trim())
-//   )
-//   ?.reverse();
