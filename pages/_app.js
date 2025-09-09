@@ -1,7 +1,7 @@
-import "../styles/globals.css"
-import "../styles/custom.css"
+import "../styles/globals.css";
+import "../styles/custom.css";
 import { ToastContainer } from "react-toastify";
-import { QueryClient,QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
 

@@ -20,10 +20,10 @@ function ProductsTable({ data }) {
     setDeleteModalOn(true);
   };
 
-  const handleEditClick=(product)=>{
-  setSelectedProduct(product);
-  setEditModalOn(true)
- }
+  const handleEditClick = (product) => {
+    setSelectedProduct(product);
+    setEditModalOn(true);
+  };
 
   return (
     <div className="w-full bg-[#F8F8F8]">
@@ -69,9 +69,7 @@ function ProductsTable({ data }) {
               <td className="w-32 flex items-center justify-center py-4">
                 <button
                   className="mx-2 hover:opacity-70"
-                  onClick={() => handleEditClick(product)
-                    
-                  }
+                  onClick={() => handleEditClick(product)}
                 >
                   <MdModeEditOutline
                     fontSize="20px"
@@ -81,7 +79,7 @@ function ProductsTable({ data }) {
                 </button>
                 {editModalOn && (
                   <EditModal
-                  editModal={editModalOn}
+                    editModal={editModalOn}
                     product={selectedProduct}
                     onClose={() => setEditModalOn(false)}
                   />

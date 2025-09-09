@@ -6,8 +6,7 @@ import { ClipLoader } from "react-spinners";
 import api from "@/helpers/constant";
 import ProductsTable from "./ProductsTable";
 
-function Dashboard() {
-
+function Dashboard({ initialData }) {
   const [searchItem, setSearchItem] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [debouncedSearch, setDebouncedSearched] = useState(searchItem);
@@ -31,12 +30,14 @@ function Dashboard() {
       return response.data;
     },
     keepPreviousData: true,
+    initialData:
+      currentPage === 1 && !debouncedSearch ? initialData : undefined,
   });
 
   if (isError) {
     return <div>خطا: {error.message}</div>;
   }
-  
+
   return (
     <ProtectedRoute>
       <Layout
@@ -45,7 +46,7 @@ function Dashboard() {
         pageCount={data?.totalPages}
         onPageChange={({ selected }) => setCurrentPage(selected + 1)}
       >
-       <div className="bg-[#f7f7f7] w-full">
+        <div className="bg-[#f7f7f7] w-full">
           {isFetching ? (
             <div className="flex items-center justify-center h-20">
               <ClipLoader color="#7189BF" />
@@ -61,24 +62,18 @@ function Dashboard() {
 
 export default Dashboard;
 
-
-
-
-
-
-
 // if (isPending) {
-  //   return (
-  //     <ProtectedRoute>
-  //       <span className="flex items-center justify-center mt-[20%]">
-  //         <ClipLoader color="#7189BF" />
-  //       </span>
-  //     </ProtectedRoute>
-  //   );
-  // }
+//   return (
+//     <ProtectedRoute>
+//       <span className="flex items-center justify-center mt-[20%]">
+//         <ClipLoader color="#7189BF" />
+//       </span>
+//     </ProtectedRoute>
+//   );
+// }
 
-  // const filteredProducts = (data?.data || [])
-  //   ?.filter((product) =>
-  //     product.name.toLowerCase().includes(searchItem.toLowerCase().trim())
-  //   )
-  //   ?.reverse();
+// const filteredProducts = (data?.data || [])
+//   ?.filter((product) =>
+//     product.name.toLowerCase().includes(searchItem.toLowerCase().trim())
+//   )
+//   ?.reverse();

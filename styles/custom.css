@@ -23,15 +23,13 @@
 }
 
 .modal-div {
-  @apply w-full  mx-auto border-none bg-transparent p-2 mx-5 text-base font-semibold ;
+  @apply w-full  mx-auto border-none bg-transparent p-2 mx-5 text-base font-semibold;
 }
 
 .modal-input {
   @apply w-full  rounded-lg bg-gray-100 p-2 text-sm font-semibold outline-none mb-1;
-
 }
 
-.add-error{
-  @apply text-red-500 text-sm  
+.add-error {
+  @apply text-red-500 text-sm;
 }
-

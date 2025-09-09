@@ -65,15 +65,15 @@ function RegistrationForm() {
         >
           ثبت نام
         </button>
-        <Link href="/login" className="self-start px-4 py-3 text-base font-medium text-blue-500 hover:text-blue-900 transition-colors">حساب کاربری دارید؟</Link>
+        <Link
+          href="/login"
+          className="self-start px-4 py-3 text-base font-medium text-blue-500 hover:text-blue-900 transition-colors"
+        >
+          حساب کاربری دارید؟
+        </Link>
       </form>
     </div>
   );
 }
 
 export default RegistrationForm;
-
-
-
-
-

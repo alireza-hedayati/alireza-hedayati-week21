@@ -18,7 +18,7 @@ function EditModal({ onClose, product, editModal }) {
 
   const submitHandler = (data) => {
     mutation.mutate({
-      name:product.name,
+      name: product.name,
       id: product.id,
       price: Number(data.price),
       quantity: Number(data.quantity),

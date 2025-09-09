@@ -42,7 +42,7 @@ function AddModal({ onClose, isOpen }) {
       <div className="w-96 bg-white p-5 rounded-2xl flex flex-col  items-center shadow-xl">
         <p className="text-lg font-semibold py-3">ایجاد محصول</p>
 
-        <ProductForm submitHandler={submitHandler} onClose={onClose}  />
+        <ProductForm submitHandler={submitHandler} onClose={onClose} />
       </div>
     </div>
   );

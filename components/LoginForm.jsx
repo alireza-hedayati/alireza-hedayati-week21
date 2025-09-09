@@ -19,12 +19,11 @@ function LoginForm() {
 
   const submitHandler = (data) => {
     mutationlogin.mutate({
-      "username": data.username,
-      "password": data.password,
+      username: data.username,
+      password: data.password,
     });
   };
   return (
-
     <div className="w-full bg-[#f7f7f7] h-screen flex items-center justify-center flex-col">
       <h1 className="text-2xl font-bold mb-10">بوت کمپ بوتو استارت</h1>
       <form
@@ -59,7 +58,12 @@ function LoginForm() {
         >
           ورود
         </button>
-        <Link href="/registration" className="self-start px-4 mt-3 text-base font-medium text-blue-500 hover:text-blue-900 transition-colors">ایجاد حساب کاربری!</Link>
+        <Link
+          href="/registration"
+          className="self-start px-4 mt-3 text-base font-medium text-blue-500 hover:text-blue-900 transition-colors"
+        >
+          ایجاد حساب کاربری!
+        </Link>
       </form>
     </div>
   );

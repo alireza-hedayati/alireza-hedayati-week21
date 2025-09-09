@@ -1,9 +1,11 @@
-import RegistrationForm from '@/components/RegistrationForm'
+import RegistrationForm from "@/components/RegistrationForm";
 
 function Registration() {
   return (
-    <div><RegistrationForm/></div>
-  )
+    <div>
+      <RegistrationForm />
+    </div>
+  );
 }
 
-export default Registration
+export default Registration;

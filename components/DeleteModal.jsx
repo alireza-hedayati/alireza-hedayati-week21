@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
 import close from "../public/Close.png";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
